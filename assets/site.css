@@ -1,0 +1,270 @@
+
+:root{
+  --navy:#07162d;
+  --navy2:#0b1e3a;
+  --blue:#1f63dc;
+  --blue2:#2e78ef;
+  --white:#f7f9fc;
+  --ink:#111827;
+  --muted:#5f6b7a;
+  --line:#dce3ee;
+  --soft:#f2f6fb;
+  --gold:#f6b91a;
+  --danger:#9f2d20;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+img{max-width:100%;display:block}
+a{color:inherit}
+.container{width:min(var(--max),calc(100% - 36px));margin:auto}
+.topbar{background:#020a16;color:#d8e4f4;font-size:.88rem;padding:.55rem 0}
+.topbar .container{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.nav{position:sticky;top:0;z-index:50;background:rgba(7,22,45,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:82px}
+.logo{height:64px;width:auto;object-fit:contain}
+.nav-links{display:flex;gap:24px;align-items:center;color:white;font-weight:700;font-size:.94rem}
+.nav-links a{text-decoration:none;opacity:.92}
+.nav-links a:hover{opacity:1;color:#8eb7ff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border-radius:10px;padding:.92rem 1.2rem;text-decoration:none;font-weight:800;border:1px solid transparent;cursor:pointer;font-size:1rem}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 8px 25px rgba(31,99,220,.25)}
+.btn-primary:hover{background:var(--blue2)}
+.btn-secondary{border-color:#fff;color:#fff;background:rgba(255,255,255,.05)}
+.btn-dark{background:var(--navy);color:#fff}
+.hero{position:relative;min-height:720px;display:grid;align-items:center;background:#09192f;color:white;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,14,28,.94) 0%,rgba(4,14,28,.76) 46%,rgba(4,14,28,.30) 100%),url('img/hero.jpg') center/cover no-repeat}
+.hero-content{position:relative;padding:86px 0 90px;max-width:760px}
+.eyebrow{display:inline-flex;gap:.55rem;align-items:center;text-transform:uppercase;letter-spacing:.14em;font-size:.82rem;font-weight:900;color:#9fc1ff}
+.stars{color:var(--gold);letter-spacing:.08em}
+h1,h2,h3{line-height:1.1;margin:0 0 .65em}
+h1{font-size:clamp(2.7rem,6vw,5.35rem);letter-spacing:-.045em}
+h2{font-size:clamp(2rem,4vw,3.35rem);letter-spacing:-.035em}
+h3{font-size:1.35rem}
+.hero p{font-size:1.18rem;max-width:670px;color:#dce6f4}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.trust-row{display:flex;gap:20px;flex-wrap:wrap;margin-top:34px;color:#dce6f4;font-weight:700;font-size:.95rem}
+.trust-row span{display:flex;align-items:center;gap:.45rem}
+.section{padding:84px 0}
+.section-soft{background:var(--soft)}
+.section-dark{background:var(--navy);color:white}
+.section-head{max-width:800px;margin-bottom:36px}
+.section-head p{color:var(--muted);font-size:1.08rem}
+.section-dark .section-head p{color:#c8d5e8}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 10px 32px rgba(13,35,65,.06)}
+.card-body{padding:24px}
+.price{font-size:1.55rem;font-weight:900;color:var(--blue);margin:.2rem 0 1rem}
+.card p{color:var(--muted)}
+.card ul{padding-left:1.2rem;color:#374151}
+.notice{border-left:4px solid var(--blue);padding:16px 18px;background:#eef5ff;border-radius:8px;color:#30415d}
+.upgrades{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.price-list{background:white;border:1px solid var(--line);border-radius:18px;padding:24px}
+.price-row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line)}
+.price-row:last-child{border-bottom:0}
+.price-row strong{white-space:nowrap;color:var(--blue)}
+.calc{background:linear-gradient(135deg,#0b1e3a,#102c55);color:white;border-radius:20px;padding:28px}
+.calc label{display:block;font-weight:800;margin:.7rem 0 .35rem}
+.calc select{width:100%;padding:.85rem;border-radius:9px;border:1px solid #4a6384;background:#fff;color:#111827}
+.calc-total{margin-top:18px;font-size:2rem;font-weight:900;color:#9fc1ff}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.photo-grid img,.feature-img{border-radius:16px;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.caption{color:var(--muted);font-size:.9rem;margin-top:8px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery img{width:100%;height:300px;object-fit:cover;border-radius:14px}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review{background:white;border:1px solid var(--line);border-radius:16px;padding:24px}
+.review .quote{font-size:1.02rem;color:#263247}
+.review .who{margin-top:18px;font-weight:900}
+.review small{color:var(--muted)}
+.form-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:start}
+.form-panel{background:white;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 18px 48px rgba(16,40,73,.08)}
+.field{margin-bottom:17px}
+.field label,.fieldset-title{display:block;font-weight:900;margin-bottom:7px;color:#1c2b40}
+.field input,.field select,.field textarea{width:100%;padding:.92rem;border:1px solid #cbd5e1;border-radius:9px;font:inherit;background:white}
+.field textarea{min-height:130px;resize:vertical}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.check{display:flex;gap:9px;align-items:flex-start;background:#f8fafc;padding:10px;border-radius:8px;border:1px solid #e4eaf2}
+.check input{margin-top:4px}
+.form-note{font-size:.88rem;color:var(--muted)}
+.hidden{display:none!important}
+.score-preview{background:#eef5ff;border:1px solid #cfe0ff;border-radius:12px;padding:14px;margin:12px 0 18px;color:#213f6c}
+.footer{background:#020a16;color:#c6d4e7;padding:52px 0 24px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+.footer h3{color:white}
+.footer a{color:#c6d4e7;text-decoration:none}
+.copyright{border-top:1px solid #1d2d44;margin-top:34px;padding-top:20px;font-size:.88rem}
+.mobile-cta{display:none}
+@media(max-width:900px){
+ .nav-links a:not(.btn){display:none}
+ .cards,.reviews{grid-template-columns:1fr 1fr}
+ .upgrades,.split,.form-wrap,.footer-grid{grid-template-columns:1fr}
+ .gallery{grid-template-columns:1fr 1fr}
+ .hero{min-height:660px}
+}
+@media(max-width:620px){
+ .container{width:min(100% - 24px,var(--max))}
+ .topbar{display:none}
+ .nav-inner{min-height:70px}
+ .logo{height:52px}
+ .nav-links .btn{padding:.72rem .85rem;font-size:.88rem}
+ .hero-content{padding:66px 0 82px}
+ .hero::before{background:linear-gradient(180deg,rgba(4,14,28,.60) 0%,rgba(4,14,28,.94) 58%,rgba(4,14,28,.98) 100%),url('img/hero.jpg') center/cover no-repeat}
+ .cards,.reviews,.gallery,.photo-grid,.checks{grid-template-columns:1fr}
+ .section{padding:62px 0}
+ .gallery img{height:250px}
+ .mobile-cta{position:fixed;display:flex;bottom:0;left:0;right:0;z-index:80;background:rgba(2,10,22,.96);padding:10px 12px;gap:8px}
+ .mobile-cta .btn{flex:1}
+ body{padding-bottom:72px}
+}
+
+/* Premium motion + depth */
+.parallax-band{position:relative;min-height:560px;display:grid;align-items:center;background-position:center;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;color:#fff;isolation:isolate}
+.parallax-band::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,10,22,.90),rgba(2,10,22,.46));z-index:-1}
+.parallax-craft{background-image:url('img/shower-sauna.png')}
+.parallax-visualize{background-image:url('img/modern-white-bathroom.jpg')}
+.parallax-overlay{width:min(720px,calc(100% - 36px));margin-left:max(18px,calc((100vw - var(--max))/2));padding:70px 0}
+.parallax-overlay h2{font-size:clamp(2.2rem,5vw,4.4rem);text-shadow:0 4px 24px rgba(0,0,0,.3)}
+.parallax-overlay p{font-size:1.14rem;color:#e4edf8;max-width:650px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s ease}
+.reveal.is-visible{opacity:1;transform:none}
+.gallery img{transition:transform .35s ease,box-shadow .35s ease;box-shadow:0 10px 28px rgba(8,25,50,.10)}
+.gallery img:hover{transform:translateY(-5px) scale(1.01);box-shadow:0 20px 42px rgba(8,25,50,.18)}
+.google-review-link{display:inline-block;margin-top:8px;font-weight:850;color:var(--blue);text-decoration:none}
+.google-review-link:hover{text-decoration:underline}
+@media(max-width:900px){.parallax-band{background-attachment:scroll;min-height:500px}.parallax-overlay{margin:auto;width:min(var(--max),calc(100% - 36px))}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.gallery img{transition:none}.parallax-band{background-attachment:scroll}}
+
+/* Refined hero: smaller image, more breathing room, no oversized full-bleed crop */
+.hero{min-height:610px;background:#09192f}
+.hero::before{inset:0 4% 0 auto;width:46%;background:linear-gradient(90deg,rgba(9,25,47,.15),rgba(9,25,47,0)),url('img/hero.jpg') center/cover no-repeat;border-radius:22px;top:48px;bottom:48px;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#09192f 0%,#09192f 47%,rgba(9,25,47,.72) 58%,rgba(9,25,47,0) 72%);pointer-events:none}
+.hero-content{z-index:2;max-width:650px;padding:76px 0}
+
+/* Featured sauna project */
+.featured-project{background:#07162a;color:#fff}
+.featured-project-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.featured-project-copy h2{font-size:clamp(2.2rem,4vw,3.7rem);margin:.35rem 0 1rem}
+.featured-project-copy p{color:#dbe7f5;font-size:1.08rem}
+.featured-note{border-left:3px solid var(--blue);padding-left:16px;margin:22px 0 28px}
+.featured-project-photo{margin:0}
+.featured-project-photo img{display:block;width:100%;max-height:650px;object-fit:contain;background:#020a16;border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.34)}
+.featured-project-photo figcaption{color:#aebfd4;font-size:.88rem;margin-top:10px;text-align:right}
+.gallery .gallery-feature{grid-column:span 2;height:380px;object-position:center}
+
+@media(max-width:900px){
+ .hero::before{width:48%;right:2%}
+ .featured-project-grid{grid-template-columns:1fr}
+ .featured-project-photo img{max-height:560px}
+}
+@media(max-width:620px){
+ .hero{min-height:auto;padding-bottom:24px}
+ .hero::before{position:absolute;top:28px;right:18px;left:18px;width:auto;height:260px;bottom:auto;border-radius:18px;background:url('img/hero.jpg') center/cover no-repeat;opacity:.78}
+ .hero::after{background:linear-gradient(180deg,rgba(9,25,47,.08) 0,rgba(9,25,47,.92) 230px,#09192f 330px)}
+ .hero-content{padding:245px 0 48px}
+ .gallery .gallery-feature{grid-column:span 1;height:300px}
+ .featured-project-photo img{max-height:none}
+}
+
+/* Rev 2 usability and gallery polish */
+.check{
+  color:#174ea6 !important;
+  background:#ffffff !important;
+  border-color:#b9c9df !important;
+  font-weight:700;
+}
+.check:hover{
+  background:#eef5ff !important;
+  border-color:#6f9ee8 !important;
+}
+.check input{
+  accent-color:#1f63dc;
+}
+.mosaic-gallery{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-auto-rows:180px;
+  gap:14px;
+}
+.mosaic-gallery figure{
+  margin:0;
+  overflow:hidden;
+  border-radius:16px;
+  background:#eaf0f8;
+  box-shadow:0 12px 30px rgba(0,0,0,.10);
+}
+.mosaic-gallery img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .35s ease;
+}
+.mosaic-gallery figure:hover img{
+  transform:scale(1.025);
+}
+.mosaic-gallery .g1{grid-column:span 7;grid-row:span 2}
+.mosaic-gallery .g2{grid-column:span 5;grid-row:span 1}
+.mosaic-gallery .g3{grid-column:span 5;grid-row:span 1}
+.mosaic-gallery .g4{grid-column:span 4;grid-row:span 1}
+.mosaic-gallery .g5{grid-column:span 4;grid-row:span 1}
+.mosaic-gallery .g6{grid-column:span 4;grid-row:span 1}
+.mosaic-gallery .g7{grid-column:span 6;grid-row:span 1}
+.mosaic-gallery .g8{grid-column:span 6;grid-row:span 1}
+.mosaic-gallery .g9{grid-column:span 4;grid-row:span 1}
+.mosaic-gallery .g10{grid-column:span 4;grid-row:span 1}
+.mosaic-gallery .g11{grid-column:span 4;grid-row:span 1}
+@media(max-width:800px){
+  .mosaic-gallery{grid-template-columns:1fr 1fr;grid-auto-rows:220px}
+  .mosaic-gallery figure{grid-column:span 1 !important;grid-row:span 1 !important}
+  .mosaic-gallery .g1{grid-column:span 2 !important}
+}
+@media(max-width:520px){
+  .mosaic-gallery{grid-template-columns:1fr;grid-auto-rows:240px}
+  .mosaic-gallery figure,.mosaic-gallery .g1{grid-column:span 1 !important}
+}
+
+/* Rev 3: before/after project story + additional kitchen */
+.before-after-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+.before-after-grid figure{
+  margin:0;
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  background:#e9eef5;
+  box-shadow:0 14px 34px rgba(0,0,0,.12);
+}
+.before-after-grid img{
+  width:100%;
+  height:430px;
+  object-fit:cover;
+  display:block;
+}
+.before-after-grid figcaption{
+  position:absolute;
+  left:16px;
+  bottom:16px;
+  background:rgba(0,0,0,.78);
+  color:#fff;
+  padding:8px 13px;
+  border-radius:999px;
+  font-weight:800;
+  letter-spacing:.04em;
+}
+.mosaic-gallery .g12{
+  grid-column:span 12;
+  grid-row:span 2;
+}
+@media(max-width:800px){
+  .before-after-grid{grid-template-columns:1fr}
+  .before-after-grid img{height:360px}
+  .mosaic-gallery .g12{grid-column:span 2 !important;grid-row:span 1 !important}
+}
+@media(max-width:520px){
+  .before-after-grid img{height:300px}
+  .mosaic-gallery .g12{grid-column:span 1 !important}
+}
