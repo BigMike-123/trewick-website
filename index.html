@@ -497,5 +497,12 @@
         'Accept': 'application/json'
       }
     });
+    if (response.ok) {
+      window.location.href = '/thank-you.html';
+    } else {
+      alert('There was a problem sending your request. Please try again.');
+    }
+  });
+</script>
 </body>
 </html>
